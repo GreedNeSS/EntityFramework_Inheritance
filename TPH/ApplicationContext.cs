@@ -10,15 +10,9 @@ namespace TPH
 {
     internal class ApplicationContext: DbContext
     {
-        public DbSet<User> users { get; set; } = null!;
-        public DbSet<Manager> managers { get; set; } = null!;
-        public DbSet<Employee> employees{ get; set; } = null!;
-
-        public ApplicationContext()
-        {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
-        }
+        public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Manager> Managers { get; set; } = null!;
+        public DbSet<Employee> Employees{ get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

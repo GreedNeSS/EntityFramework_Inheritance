@@ -9,5 +9,10 @@ namespace TPH.Models
     public class Manager: User
     {
         public string? Departament { get; set; }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, Departament: {Departament}";
+        }
     }
 }
